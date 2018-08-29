@@ -1670,6 +1670,16 @@ pre .javascript .function {
 .rtl.post-title {
   font-family: UKIJ Ekran;
 }
+.post-body p a {
+  color: #009ded;
+  border-bottom: none;
+  border-bottom: 1px solid #009ded;
+}
+.post-body p a:hover {
+  color: #fc6423;
+  border-bottom: none;
+  border-bottom: 1px solid #fc6423;
+}
 .sidebar {
   position: fixed;
   right: 0;
@@ -1755,7 +1765,7 @@ pre .javascript .function {
   max-width: 120px;
   height: auto;
   border: 1px solid #eee;
-  opacity: 0.7;
+  opacity: 1;
 }
 .site-author-image {
   border-radius: 100%;
@@ -1842,7 +1852,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e9fb45;
+  background: #42f29f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2947,22 +2957,20 @@ ul.breadcrumb li+li:last-child {
 }
 @media screen and (min-width: 1200px) {
   body {
-    background-image: url("/images/background.jpg");
+    background-image: url("/images/background_2.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    position: absolute;
     background-attachment: fixed;
-    background-position: 50% 50%;
-  }
-  #footer a {
-    color: #eee;
   }
 }
-.backstretch {
-  opacity: 0.75;
-}
+.backstretch,
 .content-wrap,
 .sidebar {
-  opacity: 0.8 !important;
+  opacity: 0.9 !important;
 }
 .header-inner {
-  background: rgba(255,255,255,0.8) !important;
+  background-color: rgba(255,255,255,0.9) !important;
 }
