@@ -1842,7 +1842,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #149c96;
+  background: #e9fb45;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2949,16 +2949,20 @@ ul.breadcrumb li+li:last-child {
   body {
     background-image: url("/images/background.jpg");
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: 50% 50%;
   }
   #footer a {
     color: #eee;
   }
 }
+.backstretch {
+  opacity: 0.75;
+}
 .content-wrap,
 .sidebar {
-  opacity: 0.7 !important;
+  opacity: 0.8 !important;
 }
 .header-inner {
-  background: rgba(255,255,255,0.7) !important;
+  background: rgba(255,255,255,0.8) !important;
 }
