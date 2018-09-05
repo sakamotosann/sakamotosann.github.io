@@ -122,24 +122,25 @@
 
 
 
-  <meta name="description" content="HDU 1028 Ignatius and the Princess III(DP入门) Problem Description“Well, it seems the first problem is too easy. I will let you know how foolish you are later.” feng5166 says.   “The second problem is,">
+  <meta name="description" content="Problem Description“Well, it seems the first problem is too easy. I will let you know how foolish you are later.” feng5166 says.   “The second problem is, given an positive integer N, we define an eq">
+<meta name="keywords" content="ACM,DP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SAKAMOTOSANN&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/2018/09/05/1/index.html">
+<meta property="og:title" content="HDU 1028 Ignatius and the Princess III(DP入门)">
+<meta property="og:url" content="http://yoursite.com/2018/09/05/HDU-1028-Ignatius-and-the-Princess-III-DP入门/index.html">
 <meta property="og:site_name" content="SAKAMOTOSANN&#39;s Blog">
-<meta property="og:description" content="HDU 1028 Ignatius and the Princess III(DP入门) Problem Description“Well, it seems the first problem is too easy. I will let you know how foolish you are later.” feng5166 says.   “The second problem is,">
+<meta property="og:description" content="Problem Description“Well, it seems the first problem is too easy. I will let you know how foolish you are later.” feng5166 says.   “The second problem is, given an positive integer N, we define an eq">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-05T14:06:09.643Z">
+<meta property="og:updated_time" content="2018-09-05T15:12:19.744Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SAKAMOTOSANN&#39;s Blog">
-<meta name="twitter:description" content="HDU 1028 Ignatius and the Princess III(DP入门) Problem Description“Well, it seems the first problem is too easy. I will let you know how foolish you are later.” feng5166 says.   “The second problem is,">
+<meta name="twitter:title" content="HDU 1028 Ignatius and the Princess III(DP入门)">
+<meta name="twitter:description" content="Problem Description“Well, it seems the first problem is too easy. I will let you know how foolish you are later.” feng5166 says.   “The second problem is, given an positive integer N, we define an eq">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/05/1/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/05/HDU-1028-Ignatius-and-the-Princess-III-DP入门/"/>
 
 
 
@@ -149,7 +150,7 @@
   };
 </script>
 
-  <title> | SAKAMOTOSANN's Blog</title>
+  <title>HDU 1028 Ignatius and the Princess III(DP入门) | SAKAMOTOSANN's Blog</title>
   
 
 
@@ -318,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/05/1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/05/HDU-1028-Ignatius-and-the-Princess-III-DP入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SAKAMOTOSANN">
@@ -335,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">HDU 1028 Ignatius and the Princess III(DP入门)
               
             
           </h1>
@@ -360,7 +361,7 @@
                 
               
 
-              <time title="Created: 2018-09-05 19:33:39 / Modified: 22:06:09" itemprop="dateCreated datePublished" datetime="2018-09-05T19:33:39+08:00">2018-09-05</time>
+              <time title="Created: 2018-09-05 22:55:20 / Modified: 23:12:19" itemprop="dateCreated datePublished" datetime="2018-09-05T22:55:20+08:00">2018-09-05</time>
             
 
             
@@ -406,7 +407,7 @@
       
 
       
-        <h1 id="HDU-1028-Ignatius-and-the-Princess-III-DP入门"><a href="#HDU-1028-Ignatius-and-the-Princess-III-DP入门" class="headerlink" title="HDU 1028 Ignatius and the Princess III(DP入门)"></a>HDU 1028 Ignatius and the Princess III(DP入门)</h1><blockquote>
+        <blockquote>
 <h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>“Well, it seems the first problem is too easy. I will let you know how foolish you are later.” feng5166 says.</p>
 </blockquote>
 <blockquote>
@@ -424,7 +425,10 @@
 <blockquote>
 <h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><p>5<br>42<br>627</p>
 </blockquote>
+<p>大致题意，一个数n可以拆分为[1, m]个大于0的整数相加，输入整数n，输出有多少种相加的方法，其实就是整数划分。</p>
+<p>参考了这篇博客 <a href="https://blog.csdn.net/l2533636371/article/details/78077640" target="_blank" rel="noopener">https://blog.csdn.net/l2533636371/article/details/78077640</a><br>想了很久，规律也找出来了，但是没能总结出状态转移方程，代码很精巧，值得学习。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN = (<span class="keyword">int</span>)<span class="number">1e3</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> N, dp[MAXN];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="number">0</span>); <span class="built_in">cin</span>.tie(<span class="number">0</span>); <span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">memset</span>(dp, <span class="number">0</span>, <span class="keyword">sizeof</span>(dp));</span><br><span class="line">	dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">120</span>; ++i)</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; i + j &lt;= <span class="number">120</span>; ++j)</span><br><span class="line">			dp[i + j] += dp[j];</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; N)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; dp[N] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -443,6 +447,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ACM/" rel="tag"># ACM</a>
+          
+            <a href="/tags/DP/" rel="tag"># DP</a>
+          
+        </div>
       
 
       
@@ -528,6 +540,21 @@
               
 
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
+              
             </nav>
           
 
@@ -558,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HDU-1028-Ignatius-and-the-Princess-III-DP入门"><span class="nav-number">1.</span> <span class="nav-text">HDU 1028 Ignatius and the Princess III(DP入门)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-Description"><span class="nav-number">1.0.1.</span> <span class="nav-text">Problem Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Input"><span class="nav-number">1.0.2.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output"><span class="nav-number">1.0.3.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Input"><span class="nav-number">1.0.4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Output"><span class="nav-number">1.0.5.</span> <span class="nav-text">Sample Output</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-Description"><span class="nav-number">1.</span> <span class="nav-text">Problem Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Input"><span class="nav-number">2.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output"><span class="nav-number">3.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Input"><span class="nav-number">4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Output"><span class="nav-number">5.</span> <span class="nav-text">Sample Output</span></a></li></ol></div>
             
 
           </div>
