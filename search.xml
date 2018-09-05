@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2018/09/05/Hello-World/"/>
-      <url>/2018/09/05/Hello-World/</url>
-      <content type="html"><![CDATA[]]></content>
-      
-      
-    </entry>
-    
-    <entry>
-      <title>HDU 1028 Ignatius and the Princess III(DP入门)</title>
-      <link href="/2018/09/05/HDU-1028-Ignatius-and-the-Princess-III-DP%E5%85%A5%E9%97%A8/"/>
-      <url>/2018/09/05/HDU-1028-Ignatius-and-the-Princess-III-DP%E5%85%A5%E9%97%A8/</url>
-      <content type="html"><![CDATA[<blockquote><h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>“Well, it seems the first problem is too easy. I will let you know how foolish you are later.” feng5166 says.</p></blockquote><blockquote><p>“The second problem is, given an positive integer N, we define an equation like this:<br>  N=a[1]+a[2]+a[3]+…+a[m];<br>  a[i]&gt;0,1&lt;=m&lt;=N;<br>My question is how many different equations you can find for a given N.<br>For example, assume N is 4, we can find:<br>  4 = 4;<br>  4 = 3 + 1;<br>  4 = 2 + 2;<br>  4 = 2 + 1 + 1;<br>  4 = 1 + 1 + 1 + 1;<br>so the result is 5 when N is 4. Note that “4 = 3 + 1” and “4 = 1 + 3” is the same in this problem. Now, you do it!”</p></blockquote><blockquote><h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>The input contains several test cases. Each test case contains a positive integer N(1&lt;=N&lt;=120) which is mentioned above. The input is terminated by the end of file.</p></blockquote><blockquote><h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>For each test case, you have to output a line contains an integer P which indicate the different equations you have found.</p></blockquote><blockquote><h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><p>4<br>10<br>20</p></blockquote><blockquote><h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><p>5<br>42<br>627</p></blockquote><p>大致题意，一个数n可以拆分为[1, m]个大于0的整数相加，输入整数n，输出有多少种相加的方法，其实就是整数划分。</p><p>参考了这篇博客 <a href="https://blog.csdn.net/l2533636371/article/details/78077640" target="_blank" rel="noopener">https://blog.csdn.net/l2533636371/article/details/78077640</a><br>想了很久，规律也找出来了，但是没能总结出状态转移方程，代码很精巧，值得学习。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN = (<span class="keyword">int</span>)<span class="number">1e3</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> N, dp[MAXN];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">ios::sync_with_stdio(<span class="number">0</span>); <span class="built_in">cin</span>.tie(<span class="number">0</span>); <span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line"><span class="built_in">memset</span>(dp, <span class="number">0</span>, <span class="keyword">sizeof</span>(dp));</span><br><span class="line">dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">120</span>; ++i)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; i + j &lt;= <span class="number">120</span>; ++j)</span><br><span class="line">dp[i + j] += dp[j];</span><br><span class="line"><span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; N)</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; dp[N] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-        <tags>
-            
-            <tag> ACM </tag>
-            
-            <tag> DP </tag>
-            
-        </tags>
-      
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[HDU 1028 Ignatius and the Princess III(DP入门)]]></title>
+    <url>%2Fpost%2F511e6933.html</url>
+    <content type="text"><![CDATA[Problem Description“Well, it seems the first problem is too easy. I will let you know how foolish you are later.” feng5166 says. “The second problem is, given an positive integer N, we define an equation like this: N=a[1]+a[2]+a[3]+…+a[m]; a[i]&gt;0,1&lt;=m&lt;=N;My question is how many different equations you can find for a given N.For example, assume N is 4, we can find: 4 = 4; 4 = 3 + 1; 4 = 2 + 2; 4 = 2 + 1 + 1; 4 = 1 + 1 + 1 + 1;so the result is 5 when N is 4. Note that “4 = 3 + 1” and “4 = 1 + 3” is the same in this problem. Now, you do it!” InputThe input contains several test cases. Each test case contains a positive integer N(1&lt;=N&lt;=120) which is mentioned above. The input is terminated by the end of file. OutputFor each test case, you have to output a line contains an integer P which indicate the different equations you have found. Sample Input41020 Sample Output542627 大致题意，一个数n可以拆分为[1, m]个大于0的整数相加，输入整数n，输出有多少种相加的方法，其实就是整数划分。 参考了这篇博客 https://blog.csdn.net/l2533636371/article/details/78077640想了很久，规律也找出来了，但是没能总结出状态转移方程，代码很精巧，值得学习。 123456789101112131415#include&lt;bits/stdc++.h&gt;using namespace std;const int MAXN = (int)1e3 + 5;int N, dp[MAXN];int main()&#123; ios::sync_with_stdio(0); cin.tie(0); cout.tie(0); memset(dp, 0, sizeof(dp)); dp[0] = 1; for (int i = 1; i &lt;= 120; ++i) for (int j = 0; i + j &lt;= 120; ++j) dp[i + j] += dp[j]; while (cin &gt;&gt; N) cout &lt;&lt; dp[N] &lt;&lt; endl;&#125;]]></content>
+      <categories>
+        <category>HDU</category>
+      </categories>
+      <tags>
+        <tag>ACM</tag>
+        <tag>DP</tag>
+      </tags>
+  </entry>
 </search>
