@@ -123,14 +123,14 @@
 
 
   <meta name="description" content="牛客OI赛制测试赛1 A-斐波那契(找规律) 题目描述设f[i]表示斐波那契数论的第i项\(f[1]=1,f[2]=1,f[i]=f[i-1]+f[i-2]\)给定一个n求\(f[n-1]*f[n+1]-f[n]^2\) 输入描述:一个整数n 输出描述:一个整数，表示答案 示例1输入4 输出1 备注对于30%的数据，\(n\leq5\)对于50%的数据，\(n\leq10^5\)对于80%的数据，">
-<meta name="keywords" content="ACM,CONTEST,模拟,UNSOLVED,找规律,DFS">
+<meta name="keywords" content="ACM,CONTEST,UNSOLVED,找规律,模拟,DFS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="newcoder OI test contest 1">
 <meta property="og:url" content="http://yoursite.com/post/4c37dc21.html">
 <meta property="og:site_name" content="SAKAMOTOSANN&#39;s Blog">
 <meta property="og:description" content="牛客OI赛制测试赛1 A-斐波那契(找规律) 题目描述设f[i]表示斐波那契数论的第i项\(f[1]=1,f[2]=1,f[i]=f[i-1]+f[i-2]\)给定一个n求\(f[n-1]*f[n+1]-f[n]^2\) 输入描述:一个整数n 输出描述:一个整数，表示答案 示例1输入4 输出1 备注对于30%的数据，\(n\leq5\)对于50%的数据，\(n\leq10^5\)对于80%的数据，">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-18T09:44:51.784Z">
+<meta property="og:updated_time" content="2018-09-23T12:10:22.963Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="newcoder OI test contest 1">
 <meta name="twitter:description" content="牛客OI赛制测试赛1 A-斐波那契(找规律) 题目描述设f[i]表示斐波那契数论的第i项\(f[1]=1,f[2]=1,f[i]=f[i-1]+f[i-2]\)给定一个n求\(f[n-1]*f[n+1]-f[n]^2\) 输入描述:一个整数n 输出描述:一个整数，表示答案 示例1输入4 输出1 备注对于30%的数据，\(n\leq5\)对于50%的数据，\(n\leq10^5\)对于80%的数据，">
@@ -409,7 +409,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-09-18 17:44:51" itemprop="dateModified" datetime="2018-09-18T17:44:51+08:00">2018-09-18</time>
+                <time title="Modified: 2018-09-23 20:10:22" itemprop="dateModified" datetime="2018-09-23T20:10:22+08:00">2018-09-23</time>
               
             
           </span>
@@ -499,7 +499,7 @@
 <h3 id="输出-2"><a href="#输出-2" class="headerlink" title="输出"></a>输出</h3><p>Yes<br>No<br>Yes</p>
 <h3 id="备注-2"><a href="#备注-2" class="headerlink" title="备注"></a>备注</h3><p>对于30%的数据，\(n\leq10,q\leq20\)<br>对于60%的数据，\(n\leq2000,q\leq2000\)<br>对于100%的数据，\(n\leq100000,q\leq1000000\)<br>设\(a_i\)表示数列中的第i个数，保证\(\sum a_i\leq10^{13}\)<br>保证数据完全随机</p>
 </blockquote>
-<p>模拟前判断一下sum能否被k整除，不能整除的肯定不能划分。说好的cin取消同步比scanf还快呢…换成scanf前T了三次QAQ<del>牛客绝对是windows判题</del></p>
+<p>模拟前判断一下sum能否被k整除，不能整除的肯定不能划分。说好的cin取消同步比scanf还快呢…换成scanf前T了三次</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN = (<span class="keyword">int</span>)<span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll n, q, a[MAXN], k, sum = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld %lld"</span>, &amp;n, &amp;q);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;a[i]);</span><br><span class="line">		sum += a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (q--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;k);</span><br><span class="line">		<span class="keyword">if</span> (sum%k)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"No\n"</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">double</span> avg = sum / (<span class="keyword">double</span>)k, sm = <span class="number">0</span>, cnt = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">			&#123;</span><br><span class="line">				sm += a[i];</span><br><span class="line">				<span class="keyword">if</span> (sm == avg)</span><br><span class="line">				&#123;</span><br><span class="line">					sm = <span class="number">0</span>;</span><br><span class="line">					cnt++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (cnt == k)</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"Yes\n"</span>);</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"No\n"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <h1 id="D-小叶的巡查-DFS"><a href="#D-小叶的巡查-DFS" class="headerlink" title="D-小叶的巡查(DFS)"></a>D-小叶的巡查(DFS)</h1><blockquote>
@@ -561,11 +561,11 @@
           
             <a href="/tags/CONTEST/" rel="tag"># CONTEST</a>
           
-            <a href="/tags/模拟/" rel="tag"># 模拟</a>
-          
             <a href="/tags/UNSOLVED/" rel="tag"># UNSOLVED</a>
           
             <a href="/tags/找规律/" rel="tag"># 找规律</a>
+          
+            <a href="/tags/模拟/" rel="tag"># 模拟</a>
           
             <a href="/tags/DFS/" rel="tag"># DFS</a>
           
