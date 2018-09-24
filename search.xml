@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[newcoder regular contest 26]]></title>
+    <url>%2Fpost%2Fbe09e36b.html</url>
+    <content type="text"><![CDATA[牛客练习赛26]]></content>
+      <categories>
+        <category>newcoder</category>
+      </categories>
+      <tags>
+        <tag>ACM</tag>
+        <tag>CONTEST</tag>
+        <tag>UNSOLVED</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[newcoder OI test contest 1]]></title>
     <url>%2Fpost%2F4c37dc21.html</url>
     <content type="text"><![CDATA[牛客OI赛制测试赛1 A-斐波那契(找规律) 题目描述设f[i]表示斐波那契数论的第i项\(f[1]=1,f[2]=1,f[i]=f[i-1]+f[i-2]\)给定一个n求\(f[n-1]*f[n+1]-f[n]^2\) 输入描述:一个整数n 输出描述:一个整数，表示答案 示例1输入4 输出1 备注对于30%的数据，\(n\leq5\)对于50%的数据，\(n\leq10^5\)对于80%的数据，\(n\leq10^{15}\)对于100%的数据，\(2\leq n\leq10^{1000000}\) 找规律，秒杀，注意读入字符串 123456789101112#include &lt;bits/stdc++.h&gt;using namespace std;string n;int main()&#123; ios::sync_with_stdio(0); cin.tie(0); cout.tie(0); cin &gt;&gt; n; if (n[n.size() - 1] &amp; 1) cout &lt;&lt; -1 &lt;&lt; endl; else cout &lt;&lt; 1 &lt;&lt; endl;&#125; B-送分题(水题) 题目描述对于一套题来说，没有一道送分题，就很不符合常理，但是我又懒得写送分题，所以你可以直接复制以下代码，即可ac本题. #include&lt; cstdio&gt;#include&lt; iostream&gt;using namespace std;int a,b,c; int main(){long long l=1,r=int(1e9)&lt;&gt;b;while(r-l&gt;1){c=(l+r)&gt;&gt;1;if(c-ba)r=c;else return printf(“%d\n”,c);} if(l!=r)return printf(“%d\n”,r); } 输入描述:输入共一行，两个整数a和b，范围在int之间 输出描述:输出一个整数表示答案 示例1输入5 123 输出128 备注喵喵喵 题面是A+B二分查找MDZZ版，输出A+B即可 123456789#include &lt;bits/stdc++.h&gt;using namespace std;int a, b;int main()&#123; ios::sync_with_stdio(0); cin.tie(0); cout.tie(0); cin &gt;&gt; a &gt;&gt; b; cout &lt;&lt; a + b &lt;&lt; endl;&#125; C-序列(模拟) 题目描述小a有n个数，他想把他们划分为连续的权值相等的k段，但他不知道这是否可行。每个数都必须被划分这个问题对他来说太难了，于是他把这个问题丢给了你。 输入描述:第一行为两个整数n,q，分别表示序列长度和询问个数。第二行有n个数，表示序列中的每个数。接下来的q行，每行包含一个数k，含义如题所示。 输出描述:输出q行，每行对应一个数Yes或者No，分别表示可行/不可行 示例1输入5 32 1 3 -1 4321 输出YesNoYes 备注对于30%的数据，\(n\leq10,q\leq20\)对于60%的数据，\(n\leq2000,q\leq2000\)对于100%的数据，\(n\leq100000,q\leq1000000\)设\(a_i\)表示数列中的第i个数，保证\(\sum a_i\leq10^{13}\)保证数据完全随机 模拟前判断一下sum能否被k整除，不能整除的肯定不能划分。说好的cin取消同步比scanf还快呢…换成scanf前T了三次 12345678910111213141516171819202122232425262728293031323334353637#include &lt;bits/stdc++.h&gt;using namespace std;const int MAXN = (int)1e5 + 5;typedef long long ll;ll n, q, a[MAXN], k, sum = 0;int main()&#123; scanf("%lld %lld", &amp;n, &amp;q); for (int i = 1; i &lt;= n; ++i) &#123; scanf("%lld", &amp;a[i]); sum += a[i]; &#125; while (q--) &#123; scanf("%lld", &amp;k); if (sum%k) printf("No\n"); else &#123; double avg = sum / (double)k, sm = 0, cnt = 0; for (int i = 1; i &lt;= n; ++i) &#123; sm += a[i]; if (sm == avg) &#123; sm = 0; cnt++; &#125; &#125; if (cnt == k) printf("Yes\n"); else printf("No\n"); &#125; &#125;&#125; D-小叶的巡查(DFS) 题目描述8102年，牛客系列竞赛空前繁荣。为了更好地管理竞赛，小叶决定巡查于各大城市之间，体察民情。所以，从一个城市马不停蹄地到另一个城市成了小叶最常做的事情。小叶有一个钱袋，用于存放往来城市间的路费。这个国家有一套优秀的交通方案，使得任何一个大城市都能从首都直接或者通过其他大城市间接到达。同时，如果不重复经过大城市，从首都到达每个大城市的方案都是唯一的。如果不在某个城市停下来修整，在连续行进过程中，小叶所花的路费与他已走过的距离有关，在走第x-1千米到第x千米这一千米中（x是整数），他花费的路费是x+10这么多。也就是说走1千米花费11，走2千米要花费23。因为国家力挺牛客系列竞赛，所以国家会给小叶报销全部的路费。现在组织想知道：小叶从某一个城市出发，中间不休息，到达另一个城市，所有可能花费的路费中最多是多少呢？ 输入描述:输入的第一行包含一个整数n，表示包括首都在内的城市数城市从1开始依次编号，1号城市为首都。接下来n-1行，描述高速路（高速路一定是n-1条）每行三个整数Pi, Qi, Di，表示城市Pi和城市Qi之间有一条高速路，长度为Di千米。 输出描述:输出一个整数，表示小叶最多花费的路费是多少。 示例1输入51 2 21 3 12 4 52 5 4 输出135 备注n&lt;23333 求树的直径，dfs或者bfs都可以，第一次求出距离当前点u最远的点v，第二次求出点距离点v最远的距离即为树的直径。 我们将一棵树T = (V, E)的直径定义为maxδ(u, v)(u,v ∈ V), 也就是说，树中所有最短路径距离的最大值即为树的直径 123456789101112131415161718192021222324252627282930313233343536373839404142434445#include &lt;bits/stdc++.h&gt;using namespace std;typedef long long ll;const int MAXN = (int)1e5 + 5;int n, P, Q, D, v = -1;vector&lt;pair&lt;int, int&gt;&gt; g[MAXN];bool vis[MAXN];ll maxLen = INT_MIN;void dfs(int start, ll len)&#123; if (len &gt; maxLen) &#123; maxLen = len; v = start; &#125; for (auto i : g[start]) &#123; if (vis[i.first] == false) &#123; vis[i.first] = true; len += i.second; dfs(i.first, len); vis[i.first] = false; len -= i.second; &#125; &#125;&#125;int main()&#123; ios::sync_with_stdio(0); cin.tie(0); cout.tie(0); memset(vis, false, sizeof(vis)); cin &gt;&gt; n; for (int i = 1; i &lt; n; ++i) &#123; cin &gt;&gt; P &gt;&gt; Q &gt;&gt; D; g[P].emplace_back(Q, D); g[Q].emplace_back(P, D); &#125; vis[1] = true; dfs(1, 0); vis[1] = false; vis[v] = true; dfs(v, 0); cout &lt;&lt; (1 + maxLen)*maxLen / 2 + maxLen * 10 &lt;&lt; endl;&#125; E- 旅行青蛙(LIS) 题目描述一只青蛙出去旅游，因为中国有一句古话说的好：“由简入奢易，由奢入俭难”，所以这只青蛙当看的当前景点比前面看过的景点差的时候，青蛙就会说“不开心”为了避免这只青蛙说“不开心”，并且使青蛙看的景点尽量的多，所以他请你帮忙给他安排一条线路，使青蛙可以看到尽量多的景点，并且不走回头路。 输入描述:第一行为一个整数n，表示景点的数量接下来n行，每行1个整数，分别表示第i个景点的质量 输出描述:一个整数，表示青蛙最多可以看到几个景点 示例1输入10318714101223301624 输出6 备注景点质量为1到n+23的整数10&lt;=n&lt;23 10%23&lt;=n&lt;233 30%233&lt;=n&lt;2333 60%2333&lt;=n&lt;23333 100% 求最长非严格上升子序列，这个算法相较于\(n^2\)算法快在了二分查找，用维护数组d，d[len]记录长度为len的子序列的最大的数字。若大于d[len]，则在下个len记录a[i]；若小于d[len]，则更新d中第一个大于a[i]的位置。更新的作用是在最大的数中找到最小的一个数，以便后面正确的更新。板子很简练，能理解的话，还是很容易看懂的:P 123456789101112131415161718192021#include &lt;bits/stdc++.h&gt;using namespace std;const int MAXN = (int)1e5 + 5;int n, a[MAXN], d[MAXN];int main()&#123; ios::sync_with_stdio(0); cin.tie(0); cout.tie(0); cin &gt;&gt; n; for (int i = 1; i &lt;= n; ++i) cin &gt;&gt; a[i]; if (!n) cout &lt;&lt; 0 &lt;&lt; endl; else &#123; int len = 1; d[1] = a[1]; for (int i = 2; i &lt;= n; ++i) d[a[i] &gt;= d[len] ? ++len : upper_bound(d + 1, d + 1 + len, a[i]) - d] = a[i]; cout &lt;&lt; len &lt;&lt; endl; &#125;&#125; F- 子序列 题目描述给出一个长度为n的序列，你需要计算出所有长度为k的子序列中，除最大最小数之外所有数的乘积相乘的结果 输入描述:第一行一个整数T，表示数据组数。对于每组数据，第一行两个整数N，k，含义如题所示接下来一行N个整数，表示给出的序列保证序列内的数互不相同 输出描述:对于每组数据，输出一个整数表示答案，对\(10^9+7\)取模每组数据之间以换行分割 示例1输入34 35 3 1 45 43 7 5 2 110 3100 1020 2050 102 12 235 4 57 32135 54354 输出14481000521918013 说明第一组数据解释所有长度为3的子序列为(5,3,1)(5,3,4)(3,1,4)(5,1,4)最终答案为3*4*3*4=144 备注对于30%的数据，\(T\leq10,N\leq100,k\leq N\)对于60%的数据，\(T\leq10,N\leq1000,k\leq N\)对于100%的数据，\(T\leq1000,N\leq1000,k\leq N\)保证序列中的元素互不相同且\(\leq10^6,k\ge3\) 1//线性基 技能点待加]]></content>
@@ -10,10 +23,12 @@
       <tags>
         <tag>ACM</tag>
         <tag>CONTEST</tag>
-        <tag>模拟</tag>
         <tag>UNSOLVED</tag>
         <tag>找规律</tag>
+        <tag>模拟</tag>
         <tag>DFS</tag>
+        <tag>LIS</tag>
+        <tag>线性基</tag>
       </tags>
   </entry>
   <entry>
@@ -26,10 +41,10 @@
       <tags>
         <tag>ACM</tag>
         <tag>CONTEST</tag>
+        <tag>模拟</tag>
         <tag>ALL KILLED</tag>
         <tag>gcd</tag>
         <tag>矩阵快速幂</tag>
-        <tag>模拟</tag>
         <tag>打表</tag>
       </tags>
   </entry>
