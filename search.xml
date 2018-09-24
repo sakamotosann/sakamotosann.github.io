@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[newcoder regular contest 26]]></title>
     <url>%2Fpost%2Fbe09e36b.html</url>
-    <content type="text"><![CDATA[牛客练习赛26]]></content>
+    <content type="text"><![CDATA[牛客练习赛26 A-平面(找规律) 题目描述小a的平面上有n个X型不明物体，但是他不确定他们的位置。现在请你来确定他们的位置，使得划分形成的平面尽量多 输入描述:一个整数n，如题所示 输出描述:一个整数，表示最多把平面分成多少份 示例1输入2 输出11 说明 备注\(n\leq10^9\)]]></content>
       <categories>
         <category>newcoder</category>
       </categories>
