@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Diary For 2019]]></title>
+    <url>%2Fpost%2F6fea1897.html</url>
+    <content type="text"><![CDATA[2019-01-01无 2019-01-02无]]></content>
+      <categories>
+        <category>Article</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[日常总结 2018年12月5日 19:12:56]]></title>
     <url>%2Fpost%2F9ff1930d.html</url>
     <content type="text"><![CDATA[咸鱼了差不多一个月，写了不少题，但是都没来得及总结。之前BISTU更新到了一半结果换成新的OJ了，旧的BISTUOJ已经关了，新的都是cf原题没什么动力做… 快到期末了，给自己攒了一大波实验报告，其它课可差不多开始准备预习了，放假之前估计是没时间了，等到寒假把该补题都补上来，顺便学一波Python（现在学是不是来不及了…]]></content>
       <categories>
-        <category>Essay</category>
+        <category>Article</category>
       </categories>
   </entry>
   <entry>
@@ -44,9 +52,9 @@
       <tags>
         <tag>ACM</tag>
         <tag>CONTEST</tag>
+        <tag>模拟</tag>
         <tag>UNSOLVED</tag>
         <tag>找规律</tag>
-        <tag>模拟</tag>
         <tag>DFS</tag>
         <tag>LIS</tag>
         <tag>线性基</tag>
@@ -62,10 +70,10 @@
       <tags>
         <tag>ACM</tag>
         <tag>CONTEST</tag>
-        <tag>模拟</tag>
         <tag>ALL KILLED</tag>
         <tag>gcd</tag>
         <tag>矩阵快速幂</tag>
+        <tag>模拟</tag>
         <tag>打表</tag>
       </tags>
   </entry>
